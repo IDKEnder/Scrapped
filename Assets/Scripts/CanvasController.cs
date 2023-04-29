@@ -4,6 +4,7 @@ public class CanvasController : MonoBehaviour
 {
     public GameObject canvas1;
     public GameObject options;
+    public GameObject Endday;
 
     void Update()
     {
@@ -23,5 +24,12 @@ public class CanvasController : MonoBehaviour
                 options.SetActive(false);
             }
         }
+    }
+
+    public void ActivateEnddayCanvas()
+    {
+        canvas1.SetActive(false);
+        options.SetActive(false);
+        Endday.SetActive(true);
     }
 }
