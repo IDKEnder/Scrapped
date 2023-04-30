@@ -4,7 +4,6 @@ public class CanvasController : MonoBehaviour
 {
     public GameObject canvas1;
     public GameObject options;
-    public GameObject Endday;
 
     void Update()
     {
@@ -25,6 +24,7 @@ public class CanvasController : MonoBehaviour
             }
         }
     }
+<<<<<<< HEAD
 
     public void ActivateEnddayCanvas()
     {
@@ -51,4 +51,6 @@ public class CanvasController : MonoBehaviour
         Endday.SetActive(false);
         canvas1.SetActive(true);
     }
+=======
+>>>>>>> parent of fe8421d (Update 29/04/23)
 }
