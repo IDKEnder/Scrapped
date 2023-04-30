@@ -44,7 +44,6 @@ public class GameClock : MonoBehaviour
     {
         if (currentTime >= 720.0f) // 720.0f is 12:00 in seconds
         {
-            CanvasController canvasController = FindObjectOfType<CanvasController>();
             canvasController.ActivateEnddayCanvas();
         }
     }
