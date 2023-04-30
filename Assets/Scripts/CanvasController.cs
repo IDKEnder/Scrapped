@@ -29,7 +29,26 @@ public class CanvasController : MonoBehaviour
     public void ActivateEnddayCanvas()
     {
         canvas1.SetActive(false);
+
+        // Destroy all child objects of options
+        foreach (Transform child in options.transform)
+        {
+            Destroy(child.gameObject);
+        }
+
+        // Destroy all child objects of Endday
+        foreach (Transform child in Endday.transform)
+        {
+            Destroy(child.gameObject);
+        }
+
         options.SetActive(false);
         Endday.SetActive(true);
+    }
+    public void NextDay()
+    {
+        options.SetActive(false);
+        Endday.SetActive(false);
+        canvas1.SetActive(true);
     }
 }
