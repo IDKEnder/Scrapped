@@ -26,6 +26,7 @@ public class CanvasController : MonoBehaviour
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     public void ActivateEnddayCanvas()
     {
@@ -52,6 +53,8 @@ public class CanvasController : MonoBehaviour
         Endday.SetActive(false);
         canvas1.SetActive(true);
     }
+=======
+>>>>>>> parent of fe8421d (Update 29/04/23)
 =======
 >>>>>>> parent of fe8421d (Update 29/04/23)
 =======
