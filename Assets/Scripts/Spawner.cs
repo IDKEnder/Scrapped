@@ -10,6 +10,18 @@ public class Spawner : MonoBehaviour
     public float[] spawnRates; // The probability of spawning each other object
     public int numObjectsToPool = 5; // The number of objects to pool from
 
+    private List<GameObject> spawnedObjects = new List<GameObject>(); // List to track spawned objects
+
+    private void OnEnable()
+    {
+        GameClock.OnTimeReached += DestroySpawnedObjects;
+    }
+
+    private void OnDisable()
+    {
+        GameClock.OnTimeReached -= DestroySpawnedObjects;
+    }
+
     public void SpawnObject()
     {
         StartCoroutine(SpawnObjectWithDelay());
@@ -50,6 +62,19 @@ public class Spawner : MonoBehaviour
         }
 
         // Spawn the chosen object
-        Instantiate(objectToSpawn, transform.position, transform.rotation);
+        GameObject spawnedObject = Instantiate(objectToSpawn, transform.position, transform.rotation);
+        spawnedObjects.Add(spawnedObject); // Add spawned object to the list
+    }
+
+    private void DestroySpawnedObjects()
+    {
+        // Destroy all spawned objects
+        foreach (GameObject spawnedObject in spawnedObjects)
+        {
+            Destroy(spawnedObject);
+        }
+
+        // Clear the list of spawned objects
+        spawnedObjects.Clear();
     }
 }

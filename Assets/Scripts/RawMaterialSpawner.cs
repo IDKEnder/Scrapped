@@ -2,12 +2,21 @@ using UnityEngine;
 
 public class RawMaterialSpawner : MonoBehaviour
 {
-    public GameObject objectToSpawn;  // Prefab of the object to spawn
-    public float spawnFrequency = 1f; // Frequency of spawning (in seconds)
-    public int spawnLimit = 10;       // Maximum number of objects to spawn
+    public GameObject objectToSpawn;
+    public float spawnFrequency = 1f;
+    public int spawnLimit = 10;
+    private int spawnCount = 0;
+    private float timer = 0f;
 
-    private int spawnCount = 0;       // Counter for spawned objects
-    private float timer = 0f;         // Timer for tracking spawn frequency
+    private void OnEnable()
+    {
+        GameClock.OnTimeThresholdReached += DestroyAllSpawnedObjects;
+    }
+
+    private void OnDisable()
+    {
+        GameClock.OnTimeThresholdReached -= DestroyAllSpawnedObjects;
+    }
 
     private void Update()
     {
@@ -15,14 +24,16 @@ public class RawMaterialSpawner : MonoBehaviour
         if (spawnCount >= spawnLimit)
             return;
 
-        // Increment the timer
         timer += Time.deltaTime;
 
         // Check if the timer has reached the desired spawn frequency
         if (timer >= spawnFrequency)
         {
             // Spawn the object
-            Instantiate(objectToSpawn, transform.position, transform.rotation);
+            GameObject spawnedObject = Instantiate(objectToSpawn, transform.position, transform.rotation);
+
+            // Attach the RawMaterialBehavior script to the spawned object
+            RawMaterialBehavior rawMaterialBehavior = spawnedObject.AddComponent<RawMaterialBehavior>();
 
             // Reset the timer
             timer = 0f;
@@ -30,5 +41,21 @@ public class RawMaterialSpawner : MonoBehaviour
             // Increment the spawn count
             spawnCount++;
         }
+    }
+
+    private void DestroyAllSpawnedObjects()
+    {
+        // Find all GameObjects with the RawMaterialBehavior script attached
+        RawMaterialBehavior[] rawMaterialBehaviors = FindObjectsOfType<RawMaterialBehavior>();
+
+        // Destroy each spawned object
+        foreach (RawMaterialBehavior rawMaterialBehavior in rawMaterialBehaviors)
+        {
+            Destroy(rawMaterialBehavior.gameObject);
+        }
+
+        // Reset the spawn count
+        spawnCount = 0;
+
     }
 }

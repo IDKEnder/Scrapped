@@ -1,15 +1,18 @@
+
 using UnityEngine;
 
 public class GameClock : MonoBehaviour
 {
-    public CanvasController canvasController;
+    public static event System.Action OnTimeThresholdReached; // Static event
+    public static event System.Action OnTimeReached;
 
+    public CanvasController canvasController;
     public float currentTime = 0.0f;
     public float timeSpeed = 1.0f;
     public Color backgroundColor = new Color(0.0f, 0.0f, 0.0f, 0.0f);
     public Color textColor = Color.white;
 
-    void Update()
+    private void Update()
     {
         currentTime += Time.deltaTime * timeSpeed;
         CheckTime();
@@ -40,10 +43,12 @@ public class GameClock : MonoBehaviour
         GUI.Label(timerRect, "Time: " + timeString, timerStyle);
     }
 
-    void CheckTime()
+    private void CheckTime()
     {
-        if (currentTime >= 720.0f) // 720.0f is 12:00 in seconds
+        if (currentTime >= 720.0f && OnTimeThresholdReached != null) // 720.0f is 12:00 in seconds
         {
+            OnTimeReached?.Invoke();
+            OnTimeThresholdReached.Invoke(); // Invoke the event
             CanvasController canvasController = FindObjectOfType<CanvasController>();
             canvasController.ActivateEnddayCanvas();
         }
