@@ -7,10 +7,11 @@ public class Spawner : MonoBehaviour
     public GameObject ObjectToSpawn;
     public GameObject[] OtherObjects;
     public float delay = 2f;
-    public float[] spawnRates; // The probability of spawning each other object
-    public int numObjectsToPool = 5; // The number of objects to pool from
+    public float[] spawnRates;
+    public int numObjectsToPool = 5;
 
-    private List<GameObject> spawnedObjects = new List<GameObject>(); // List to track spawned objects
+    private List<GameObject> spawnedObjects = new List<GameObject>();
+    private GameObject currentSpawnedObject; // Reference to the currently spawned object
 
     private void OnEnable()
     {
@@ -31,6 +32,7 @@ public class Spawner : MonoBehaviour
     {
         // Spawn ObjectToSpawn and destroy it after delay
         GameObject obj = Instantiate(ObjectToSpawn, transform.position, transform.rotation);
+        currentSpawnedObject = obj; // Store reference to the spawned object
         Destroy(obj, delay);
 
         yield return new WaitForSeconds(delay);
@@ -57,18 +59,23 @@ public class Spawner : MonoBehaviour
 
         if (objectToSpawn == null)
         {
-            // If ObjectToSpawn is null, default to the first object in the pool
             objectToSpawn = OtherObjects[0];
         }
 
         // Spawn the chosen object
         GameObject spawnedObject = Instantiate(objectToSpawn, transform.position, transform.rotation);
-        spawnedObjects.Add(spawnedObject); // Add spawned object to the list
+        spawnedObjects.Add(spawnedObject);
     }
 
     private void DestroySpawnedObjects()
     {
-        // Destroy all spawned objects
+        // Destroy the currently spawned object (interrupt animation)
+        if (currentSpawnedObject != null)
+        {
+            Destroy(currentSpawnedObject);
+        }
+
+        // Destroy all other spawned objects
         foreach (GameObject spawnedObject in spawnedObjects)
         {
             Destroy(spawnedObject);
