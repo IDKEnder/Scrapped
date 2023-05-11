@@ -5,7 +5,7 @@ using UnityEngine;
 public class Bottles : MonoBehaviour
 {
     [SerializeField]
-    private int num = 1; // Default value of num is 1
+    private int num = 1;
 
     private void OnTriggerStay2D(Collider2D collision)
     {
