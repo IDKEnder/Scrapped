@@ -5,8 +5,10 @@ public class RawMaterialSpawner : MonoBehaviour
     public GameObject objectToSpawn;
     public float spawnFrequency = 1f;
     public int spawnLimit = 10;
+    public float spawnDelay = 2f; // Delay between each spawn
     private int spawnCount = 0;
     private float timer = 0f;
+    private float delayTimer = 0f; // Timer for the spawn delay
 
     private void OnEnable()
     {
@@ -24,6 +26,13 @@ public class RawMaterialSpawner : MonoBehaviour
         if (spawnCount >= spawnLimit)
             return;
 
+        // Check if the spawn delay timer is active
+        if (delayTimer > 0f)
+        {
+            delayTimer -= Time.deltaTime;
+            return;
+        }
+
         timer += Time.deltaTime;
 
         // Check if the timer has reached the desired spawn frequency
@@ -40,6 +49,9 @@ public class RawMaterialSpawner : MonoBehaviour
 
             // Increment the spawn count
             spawnCount++;
+
+            // Start the spawn delay timer
+            delayTimer = spawnDelay;
         }
     }
 
@@ -56,6 +68,5 @@ public class RawMaterialSpawner : MonoBehaviour
 
         // Reset the spawn count
         spawnCount = 0;
-
     }
 }

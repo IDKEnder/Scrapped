@@ -9,7 +9,6 @@ public class Shipment : MonoBehaviour
     public int TripleBottle = 0;
     public int GoldenBottle = 0;
     public int BrokenBottle = 0;
-    public int RawPlasticMaterial = 0;
 
     private void OnTriggerStay2D(Collider2D collision)
     {

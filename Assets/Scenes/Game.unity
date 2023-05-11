@@ -291,6 +291,68 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &92812142
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 92812143}
+  - component: {fileID: 92812145}
+  - component: {fileID: 92812144}
+  m_Layer: 0
+  m_Name: Destroyer
+  m_TagString: Obstacle
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &92812143
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 92812142}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -29, y: 163, z: -6170.458}
+  m_LocalScale: {x: 2.5, y: 1.8875, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 268169925}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &92812144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 92812142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40ceb60b5e549e6499c2c35f42a04c67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DestroyedMaterial: 0
+--- !u!58 &92812145
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 92812142}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &99968388
 GameObject:
   m_ObjectHideFlags: 0
@@ -1170,6 +1232,7 @@ RectTransform:
   - {fileID: 1791286439}
   - {fileID: 576598661}
   - {fileID: 182946844}
+  - {fileID: 92812143}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3440,7 +3503,6 @@ MonoBehaviour:
   TripleBottle: 0
   GoldenBottle: 0
   BrokenBottle: 0
-  RawPlasticMaterial: 0
 --- !u!1 &1146009085
 GameObject:
   m_ObjectHideFlags: 0
@@ -4403,6 +4465,7 @@ MonoBehaviour:
   objectToSpawn: {fileID: 1773435988}
   spawnFrequency: 1
   spawnLimit: 10
+  spawnDelay: 1
 --- !u!1 &1320714184
 GameObject:
   m_ObjectHideFlags: 0
@@ -5090,14 +5153,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24ac17ec52d90794c8f7e660e93d5cd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyOnCollision: {fileID: 92812144}
   shipment: {fileID: 1091270026}
   displayText: {fileID: 1520785781}
-  bottlePrice: 1
-  doubleBottlePrice: 2
-  tripleBottlePrice: 3
-  goldenBottlePrice: 5
-  brokenBottlePrice: 0.5
-  rawPlasticMaterialPrice: 0.1
+  total: 0
 --- !u!114 &1520785781
 MonoBehaviour:
   m_ObjectHideFlags: 0

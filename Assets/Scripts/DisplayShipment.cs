@@ -3,19 +3,21 @@ using UnityEngine.UI;
 
 public class DisplayShipment : MonoBehaviour
 {
+    public DestroyOnCollision destroyOnCollision;
     public Shipment shipment;
     public Text displayText;
-    public float bottlePrice = 1f;
-    public float doubleBottlePrice = 2f;
-    public float tripleBottlePrice = 3f;
-    public float goldenBottlePrice = 5f;
-    public float brokenBottlePrice = 0.5f;
-    public float rawPlasticMaterialPrice = 0.1f;
+    private float bottlePrice = 1f;
+    private float doubleBottlePrice = 2f;
+    private float tripleBottlePrice = 3f;
+    private float goldenBottlePrice = 5f;
+    private float brokenBottlePrice = 0.5f;
+    private float DestroyedMaterialDeduction = -10f;
+    public float total = 0f;
 
     private void Update()
     {
+        total = 0f;
         string displayString = "";
-        float total = 0f;
 
         float bottleTotal = shipment.Bottle * bottlePrice;
         total += bottleTotal;
@@ -42,10 +44,10 @@ public class DisplayShipment : MonoBehaviour
         displayString += "Broken Bottle: " + shipment.BrokenBottle + "  --  Price: $" + brokenBottlePrice.ToString("F2") +
             "  --  Total: $" + brokenBottleTotal.ToString("F2") + "\n";
 
-        float rawPlasticMaterialTotal = shipment.RawPlasticMaterial * rawPlasticMaterialPrice;
-        total += rawPlasticMaterialTotal;
-        displayString += "Raw Plastic Material: " + shipment.RawPlasticMaterial + "  --  Price: $" + rawPlasticMaterialPrice.ToString("F2") +
-            "  --  Total: $" + rawPlasticMaterialTotal.ToString("F2") + "\n";
+        float DestroyedMaterialTotal = destroyOnCollision.DestroyedMaterial * DestroyedMaterialDeduction;
+        total -= DestroyedMaterialTotal; 
+        displayString += "Destroyed Material: " + (destroyOnCollision.DestroyedMaterial * -1) + "  --  Deduction: $" + (DestroyedMaterialDeduction * -1).ToString("F2") +
+            "  --  Total: $" + total.ToString("F2") + "\n"; 
 
         displayString += "Total: $" + total.ToString("F2");
 

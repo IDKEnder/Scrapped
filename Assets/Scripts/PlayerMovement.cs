@@ -26,13 +26,10 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         // Calculate time elapsed since last FixedUpdate
-        float timeElapsed = Time.time - lastTime;
-
-        // Update lastTime with current time
-        lastTime = Time.time;
+        float timeElapsed = Time.fixedDeltaTime;
 
         // Calculate movement with time-based speed
-        Vector2 velocity = movement * moveSpeed * timeElapsed;
+        Vector2 velocity = movement.normalized * moveSpeed * timeElapsed;
 
         // Move the rigidbody
         rb.MovePosition(rb.position + velocity);
