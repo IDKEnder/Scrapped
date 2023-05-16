@@ -1,14 +1,21 @@
 using UnityEngine;
 
+[System.Serializable]
+public class SpawnableObject
+{
+    public GameObject objectPrefab;
+    public float spawnChance;
+}
+
 public class RawMaterialSpawner : MonoBehaviour
 {
-    public GameObject objectToSpawn;
+    public SpawnableObject[] objectsToSpawn; 
     public float spawnFrequency = 1f;
     public int spawnLimit = 10;
-    public float spawnDelay = 2f; // Delay between each spawn
+    public float spawnDelay = 2f; 
     public int spawnCount = 0;
     private float timer = 0f;
-    private float delayTimer = 0f; // Timer for the spawn delay
+    private float delayTimer = 0f; 
 
     private void OnEnable()
     {
@@ -22,11 +29,9 @@ public class RawMaterialSpawner : MonoBehaviour
 
     private void Update()
     {
-        // Check if the spawn count has reached the limit
         if (spawnCount >= spawnLimit)
             return;
 
-        // Check if the spawn delay timer is active
         if (delayTimer > 0f)
         {
             delayTimer -= Time.deltaTime;
@@ -38,35 +43,49 @@ public class RawMaterialSpawner : MonoBehaviour
         // Check if the timer has reached the desired spawn frequency
         if (timer >= spawnFrequency)
         {
-            // Spawn the object
-            GameObject spawnedObject = Instantiate(objectToSpawn, transform.position, transform.rotation);
+            // Calculate total spawn chance
+            float totalSpawnChance = 0f;
+            foreach (SpawnableObject spawnableObject in objectsToSpawn)
+            {
+                totalSpawnChance += spawnableObject.spawnChance;
+            }
 
-            // Attach the RawMaterialBehavior script to the spawned object
-            RawMaterialBehavior rawMaterialBehavior = spawnedObject.AddComponent<RawMaterialBehavior>();
+            // Generate a random value between 0 and the total spawn chance
+            float randomValue = Random.Range(0f, totalSpawnChance);
 
-            // Reset the timer
+            // Determine which object to spawn based on the random value
+            float cumulativeChance = 0f;
+            foreach (SpawnableObject spawnableObject in objectsToSpawn)
+            {
+                cumulativeChance += spawnableObject.spawnChance;
+                if (randomValue <= cumulativeChance)
+                {
+                    GameObject spawnedObject = Instantiate(spawnableObject.objectPrefab, transform.position, transform.rotation);
+
+                    // Attach the RawMaterialBehavior script to the spawned object
+                    RawMaterialBehavior rawMaterialBehavior = spawnedObject.AddComponent<RawMaterialBehavior>();
+
+                    spawnCount++;
+
+                    break;
+                }
+            }
+
             timer = 0f;
 
-            // Increment the spawn count
-            spawnCount++;
-
-            // Start the spawn delay timer
             delayTimer = spawnDelay;
         }
     }
 
     private void DestroyAllSpawnedObjects()
     {
-        // Find all GameObjects with the RawMaterialBehavior script attached
         RawMaterialBehavior[] rawMaterialBehaviors = FindObjectsOfType<RawMaterialBehavior>();
 
-        // Destroy each spawned object
         foreach (RawMaterialBehavior rawMaterialBehavior in rawMaterialBehaviors)
         {
             Destroy(rawMaterialBehavior.gameObject);
         }
 
-        // Reset the spawn count
         spawnCount = 0;
     }
 }

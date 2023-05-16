@@ -10,4 +10,10 @@ public class Player : MonoBehaviour
     public int GoldenBottle = 0;
     public int BrokenBottle = 0;
     public int RawPlasticMaterial = 0;
+    public int Can = 0;
+    public int DoubleCan = 0;
+    public int TripleCan = 0;
+    public int GoldenCan = 0;
+    public int BrokenCan = 0;
+    public int RawMetal = 0;
 }

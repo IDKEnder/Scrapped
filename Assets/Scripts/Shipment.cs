@@ -9,6 +9,11 @@ public class Shipment : MonoBehaviour
     public int TripleBottle = 0;
     public int GoldenBottle = 0;
     public int BrokenBottle = 0;
+    public int Can = 0;
+    public int DoubleCan = 0;
+    public int TripleCan = 0;
+    public int GoldenCan = 0;
+    public int BrokenCan = 0;
 
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -39,6 +44,31 @@ public class Shipment : MonoBehaviour
             {
                 player.BrokenBottle--;
                 BrokenBottle++;
+            }
+            if (player.Can > 0)
+            {
+                player.Can--;
+                Can++;
+            }
+            if (player.DoubleCan > 0)
+            {
+                player.DoubleCan--;
+                DoubleCan++;
+            }
+            if (player.TripleCan > 0)
+            {
+                player.TripleCan--;
+                TripleCan++;
+            }
+            if (player.GoldenCan > 0)
+            {
+                player.GoldenCan--;
+                GoldenCan++;
+            }
+            if (player.BrokenCan > 0)
+            {
+                player.BrokenCan--;
+                BrokenCan++;
             }
         }
     }

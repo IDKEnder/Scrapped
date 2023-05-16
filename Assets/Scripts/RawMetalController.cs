@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RawMaterialController : MonoBehaviour
+public class RawMetalController : MonoBehaviour
 {
     private bool isInteractable = true; // Flag to track if the object is interactable
 
@@ -11,9 +11,9 @@ public class RawMaterialController : MonoBehaviour
         Player player = collision.GetComponent<Player>();
         if (player && isInteractable && Input.GetKey(KeyCode.E)) // Check if the "E" key is being held down and the object is interactable
         {
-            if (player.RawPlasticMaterial == 0) // Check if the player does not have any RawPlasticMaterial
+            if (player.RawMetal == 0) // Check if the player does not have any RawPlasticMaterial
             {
-                player.RawPlasticMaterial++;
+                player.RawMetal++;
                 Destroy(gameObject);
             }
             else

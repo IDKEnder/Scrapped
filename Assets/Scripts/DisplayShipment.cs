@@ -11,6 +11,11 @@ public class DisplayShipment : MonoBehaviour
     private float tripleBottlePrice = 3f;
     private float goldenBottlePrice = 5f;
     private float brokenBottlePrice = 0.5f;
+    private float CanPrice = 1f;
+    private float doubleCanPrice = 2f;
+    private float tripleCanPrice = 3f;
+    private float goldenCanPrice = 5f;
+    private float brokenCanPrice = 0.5f;
     private float DestroyedMaterialDeduction = -10f;
     public float total = 0f;
 
@@ -39,11 +44,31 @@ public class DisplayShipment : MonoBehaviour
         displayString += "Broken Bottle: " + shipment.BrokenBottle + "  --  Price: $" + brokenBottlePrice.ToString("F2") +
             "  --  Total: $" + brokenBottleTotal.ToString("F2") + "\n";
 
+        float CanTotal = shipment.Can * CanPrice;
+        displayString += "Bottle: " + shipment.Bottle + "  --  Price: $" + bottlePrice.ToString("F2") +
+            "  --  Total: $" + bottleTotal.ToString("F2") + "\n";
+
+        float doubleCanTotal = shipment.DoubleCan * doubleCanPrice;
+        displayString += "Double Bottle: " + shipment.DoubleBottle + "  --  Price: $" + doubleBottlePrice.ToString("F2") +
+            "  --  Total: $" + doubleBottleTotal.ToString("F2") + "\n";
+
+        float tripleCanTotal = shipment.TripleCan * tripleCanPrice;
+        displayString += "Triple Bottle: " + shipment.TripleBottle + "  --  Price: $" + tripleBottlePrice.ToString("F2") +
+            "  --  Total: $" + tripleBottleTotal.ToString("F2") + "\n";
+
+        float goldenCanTotal = shipment.GoldenCan * goldenCanPrice;
+        displayString += "Golden Bottle: " + shipment.GoldenBottle + "  --  Price: $" + goldenBottlePrice.ToString("F2") +
+            "  --  Total: $" + goldenBottleTotal.ToString("F2") + "\n";
+
+        float brokenCanTotal = shipment.BrokenCan * brokenCanPrice;
+        displayString += "Broken Bottle: " + shipment.BrokenBottle + "  --  Price: $" + brokenBottlePrice.ToString("F2") +
+            "  --  Total: $" + brokenBottleTotal.ToString("F2") + "\n";
+
         float DestroyedMaterialTotal = destroyOnCollision.DestroyedMaterial * DestroyedMaterialDeduction;
         displayString += "Destroyed Material: " + (destroyOnCollision.DestroyedMaterial * -1) + "  --  Deduction: $" + (DestroyedMaterialDeduction * -1).ToString("F2") +
             "  --  Total: $" + total.ToString("F2") + "\n";
 
-        total = bottleTotal + doubleBottleTotal + tripleBottleTotal + goldenBottleTotal + brokenBottleTotal - DestroyedMaterialTotal;
+        total = bottleTotal + doubleBottleTotal + tripleBottleTotal + goldenBottleTotal + brokenBottleTotal + CanTotal + doubleCanTotal + tripleCanTotal + goldenCanTotal + brokenCanTotal - DestroyedMaterialTotal;
         displayString += "Total: $" + total.ToString("F2");
 
         displayText.text = displayString;
