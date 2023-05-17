@@ -310,7 +310,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1393945833, guid: a3f5a9cb47968934ebc3cf2f72f7a99c, type: 3}
+  m_Sprite: {fileID: -1847807085, guid: a3f5a9cb47968934ebc3cf2f72f7a99c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -431,7 +431,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -850771876, guid: a3f5a9cb47968934ebc3cf2f72f7a99c, type: 3}
+  m_Sprite: {fileID: 2063505016, guid: a3f5a9cb47968934ebc3cf2f72f7a99c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -746,7 +746,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1648030023, guid: adad8d891d9771b468d948e36c3665ea, type: 3}
+  m_Sprite: {fileID: -502174582, guid: a3f5a9cb47968934ebc3cf2f72f7a99c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -789,7 +789,7 @@ GameObject:
   - component: {fileID: 1544553628}
   - component: {fileID: 1544553627}
   m_Layer: 5
-  m_Name: Continue_Button
+  m_Name: Tutorial_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -879,7 +879,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1080243496, guid: adad8d891d9771b468d948e36c3665ea, type: 3}
+  m_Sprite: {fileID: -333966563, guid: a3f5a9cb47968934ebc3cf2f72f7a99c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
