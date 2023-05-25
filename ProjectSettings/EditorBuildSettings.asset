@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EndOfDemo.unity
     guid: bd760a2331230a549a9fbe5410528480
+  - enabled: 1
+    path: Assets/Scenes/Intro.unity
+    guid: fb803f533fd93d74a99223cc9aa0e197
+  - enabled: 1
+    path: Assets/Scenes/Shop.unity
+    guid: b1b9c57bbde3bea439b51ef1d607f764
   m_configObjects: {}
