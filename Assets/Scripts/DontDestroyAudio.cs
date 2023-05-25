@@ -15,7 +15,7 @@ public class DontDestroyAudio : MonoBehaviour
 
     void OnLevelWasLoaded(int level)
     {
-        if (SceneManager.GetActiveScene().name == "Game")
+        if (SceneManager.GetActiveScene().name != "Pre_Menu" && SceneManager.GetActiveScene().name != "Menu")
         {
             Destroy(gameObject);
         }
