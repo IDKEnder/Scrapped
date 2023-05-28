@@ -6734,6 +6734,7 @@ GameObject:
   - component: {fileID: 1658623161}
   - component: {fileID: 1658623162}
   - component: {fileID: 1658623164}
+  - component: {fileID: 1658623165}
   - component: {fileID: 1658623163}
   m_Layer: 0
   m_Name: Fixed level design_17
@@ -6917,9 +6918,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b1ebedca237dcc4f8e678aa43db8675, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dayCounter: {fileID: 0}
   conveyorbelt: {fileID: 1658623163}
   interval: 2
-  timeLimit: 120
+  timeLimit: 10000
+--- !u!114 &1658623165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1658623160}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c631dbb18fcb18645b36c544d0fed2ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  day: 1
 --- !u!1 &1682931990
 GameObject:
   m_ObjectHideFlags: 0

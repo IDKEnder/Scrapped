@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ConveyorbeltSFX : MonoBehaviour
 {
+    public DayCounter dayCounter;
     public AudioSource conveyorbelt;
     public float interval = 1f;
     private float nextMoveTime;
@@ -12,6 +13,10 @@ public class ConveyorbeltSFX : MonoBehaviour
     private void Start()
     {
         nextMoveTime = Time.time + 1;
+        if (dayCounter.day >= 1)
+        {
+            nextMoveTime = Time.time;
+        }
     }
 
     private void Update()
