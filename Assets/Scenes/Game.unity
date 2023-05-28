@@ -6918,10 +6918,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b1ebedca237dcc4f8e678aa43db8675, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dayCounter: {fileID: 0}
   conveyorbelt: {fileID: 1658623163}
   interval: 2
   timeLimit: 10000
+  nextDayDelay: 1
 --- !u!114 &1658623165
 MonoBehaviour:
   m_ObjectHideFlags: 0

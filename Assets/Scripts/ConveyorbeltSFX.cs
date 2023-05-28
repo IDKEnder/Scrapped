@@ -4,36 +4,42 @@ using UnityEngine;
 
 public class ConveyorbeltSFX : MonoBehaviour
 {
-    public DayCounter dayCounter;
+    private DayCounter dayCounter;
     public AudioSource conveyorbelt;
     public float interval = 1f;
     private float nextMoveTime;
     public float timeLimit = 0f;
+    public float nextDayDelay = 0f;
 
     private void Start()
     {
-        nextMoveTime = Time.time + 1;
+        dayCounter = GetComponent<DayCounter>();
         if (dayCounter.day >= 1)
         {
-            nextMoveTime = Time.time;
+            nextMoveTime = Time.time + nextDayDelay;
+        }
+        else
+        {
+            nextMoveTime = Time.time + 1;
         }
     }
 
-    private void Update()
-    {
-        if (Time.time >= nextMoveTime)
+        private void Update()
         {
-            PlaySound();
-            nextMoveTime = Time.time + interval;
+            if (Time.time >= nextMoveTime)
+            {
+                PlaySound();
+                nextMoveTime = Time.time + interval;
+            }
+            if (Time.time >= timeLimit)
+            {
+                conveyorbelt.Pause();
+            }
         }
-        if (Time.time >= timeLimit)
-        {
-            conveyorbelt.Pause();
-        }
-    }
 
-    private void PlaySound()
-    {
-        conveyorbelt.Play();
-    }
+        private void PlaySound()
+        {
+            conveyorbelt.Play();
+        }
+    
 }
