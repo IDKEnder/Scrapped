@@ -45,7 +45,7 @@ public class GameClock : MonoBehaviour
 
     private void CheckTime()
     {
-        if (currentTime >= 720.0f && OnTimeThresholdReached != null) // 720.0f is 12:00 in seconds
+        if (currentTime >= 120.0f && OnTimeThresholdReached != null) // 120.0f is 2:00 in seconds
         {
             OnTimeReached?.Invoke();
             OnTimeThresholdReached.Invoke(); // Invoke the event

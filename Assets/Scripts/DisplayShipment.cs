@@ -6,17 +6,17 @@ public class DisplayShipment : MonoBehaviour
     public DestroyOnCollision destroyOnCollision;
     public Shipment shipment;
     public Text displayText;
-    private float bottlePrice = 1f;
-    private float doubleBottlePrice = 2f;
-    private float tripleBottlePrice = 3f;
-    private float goldenBottlePrice = 5f;
-    private float brokenBottlePrice = 0.5f;
-    private float CanPrice = 1f;
-    private float doubleCanPrice = 2f;
-    private float tripleCanPrice = 3f;
-    private float goldenCanPrice = 5f;
-    private float brokenCanPrice = 0.5f;
-    private float DestroyedMaterialDeduction = -10f;
+    private float bottlePrice = 100f;
+    private float doubleBottlePrice = 200f;
+    private float tripleBottlePrice = 300f;
+    private float goldenBottlePrice = 500f;
+    private float brokenBottlePrice = 50f;
+    private float CanPrice = 100f;
+    private float doubleCanPrice = 200f;
+    private float tripleCanPrice = 300f;
+    private float goldenCanPrice = 500f;
+    private float brokenCanPrice = 50f;
+    private float DestroyedMaterialDeduction = -1000f;
     public float total = 0f;
 
     private void Update()
