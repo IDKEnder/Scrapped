@@ -8093,6 +8093,7 @@ MonoBehaviour:
   shipment: {fileID: 1091270026}
   rawMaterialSpawner: {fileID: 1311228002}
   dayCounter: {fileID: 520054322}
+  cashDisplay: {fileID: 1107307251}
 --- !u!1 &1947118352
 GameObject:
   m_ObjectHideFlags: 0

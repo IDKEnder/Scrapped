@@ -9,13 +9,13 @@ public class SpawnableObject
 
 public class RawMaterialSpawner : MonoBehaviour
 {
-    public SpawnableObject[] objectsToSpawn; 
+    public SpawnableObject[] objectsToSpawn;
     public float spawnFrequency = 1f;
     public int spawnLimit = 10;
-    public float spawnDelay = 2f; 
+    public float spawnDelay = 2f;
     public int spawnCount = 0;
     private float timer = 0f;
-    private float delayTimer = 0f; 
+    private float delayTimer = 0f;
 
     private void OnEnable()
     {

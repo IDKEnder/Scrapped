@@ -11,6 +11,7 @@ public class NextDay : MonoBehaviour
     public Shipment shipment;
     public RawMaterialSpawner rawMaterialSpawner;
     public DayCounter dayCounter;
+    public CashDisplay cashDisplay;
 
     private void Start()
     {
@@ -23,6 +24,7 @@ public class NextDay : MonoBehaviour
     {
         IncrementDays();
         SetActiveCanvas();
+        UpdateCash();
         ResetTotal();
         ResetSpawnCountAndLimit();
         ResetShipmentVariables();
@@ -78,6 +80,14 @@ public class NextDay : MonoBehaviour
             shipment.TripleBottle = 0;
             shipment.GoldenBottle = 0;
             shipment.BrokenBottle = 0;
+        }
+    }
+
+    private void UpdateCash()
+    {
+        if (displayShipment != null && cashDisplay != null)
+        {
+            cashDisplay.cash = (int)displayShipment.total; // Update the cash variable with the value of total from DisplayShipment
         }
     }
 }
