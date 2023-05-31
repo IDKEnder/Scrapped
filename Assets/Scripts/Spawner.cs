@@ -13,6 +13,8 @@ public class Spawner : MonoBehaviour
     private List<GameObject> spawnedObjects = new List<GameObject>();
     private GameObject currentSpawnedObject; // Reference to the currently spawned object
 
+    private bool isObjectsActive = true;
+
     private void OnEnable()
     {
         GameClock.OnTimeReached += DestroySpawnedObjects;
@@ -21,6 +23,14 @@ public class Spawner : MonoBehaviour
     private void OnDisable()
     {
         GameClock.OnTimeReached -= DestroySpawnedObjects;
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            ToggleObjectsActive(!isObjectsActive);
+        }
     }
 
     public void SpawnObject()
@@ -65,6 +75,7 @@ public class Spawner : MonoBehaviour
         // Spawn the chosen object
         GameObject spawnedObject = Instantiate(objectToSpawn, transform.position, transform.rotation);
         spawnedObjects.Add(spawnedObject);
+        spawnedObject.SetActive(isObjectsActive); // Set initial active state
     }
 
     private void DestroySpawnedObjects()
@@ -83,5 +94,15 @@ public class Spawner : MonoBehaviour
 
         // Clear the list of spawned objects
         spawnedObjects.Clear();
+    }
+
+    private void ToggleObjectsActive(bool active)
+    {
+        isObjectsActive = active;
+
+        foreach (GameObject spawnedObject in spawnedObjects)
+        {
+            spawnedObject.SetActive(active);
+        }
     }
 }
