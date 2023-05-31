@@ -5,6 +5,12 @@ using UnityEngine;
 public class RawMetalController : MonoBehaviour
 {
     private bool isInteractable = true; // Flag to track if the object is interactable
+    private ObjectTracker objectTracker; // Reference to the ObjectTracker script
+
+    private void Start()
+    {
+        objectTracker = FindObjectOfType<ObjectTracker>(); // Find the ObjectTracker component in the scene
+    }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -14,7 +20,13 @@ public class RawMetalController : MonoBehaviour
             if (player.RawMetal == 0) // Check if the player does not have any RawPlasticMaterial
             {
                 player.RawMetal++;
-                Destroy(gameObject);
+
+                if (objectTracker != null)
+                {
+                    objectTracker.RemoveObject(gameObject); // Remove the object from the ObjectTracker
+                }
+
+                DestroyObject();
             }
             else
             {
@@ -28,5 +40,19 @@ public class RawMetalController : MonoBehaviour
     {
         yield return new WaitForSeconds(1.0f); // Adjust the delay time as needed
         isInteractable = true; // Reset the flag to allow interaction
+    }
+
+    private void DestroyObject()
+    {
+        // Additional logic for destroying the game object, if needed
+        Destroy(gameObject);
+    }
+
+    private void OnDestroy()
+    {
+        if (objectTracker != null)
+        {
+            objectTracker.RemoveObject(gameObject); // Remove the object from the ObjectTracker when it is destroyed
+        }
     }
 }

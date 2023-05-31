@@ -16,6 +16,7 @@ public class RawMaterialSpawner : MonoBehaviour
     public int spawnCount = 0;
     private float timer = 0f;
     private float delayTimer = 0f;
+    public ObjectTracker objectTracker;
 
     private void OnEnable()
     {
@@ -65,6 +66,9 @@ public class RawMaterialSpawner : MonoBehaviour
                     // Attach the RawMaterialBehavior script to the spawned object
                     RawMaterialBehavior rawMaterialBehavior = spawnedObject.AddComponent<RawMaterialBehavior>();
 
+                    // Add the spawned object to the object tracker
+                    objectTracker.AddObject(spawnedObject);
+
                     spawnCount++;
 
                     break;
@@ -79,11 +83,9 @@ public class RawMaterialSpawner : MonoBehaviour
 
     private void DestroyAllSpawnedObjects()
     {
-        RawMaterialBehavior[] rawMaterialBehaviors = FindObjectsOfType<RawMaterialBehavior>();
-
-        foreach (RawMaterialBehavior rawMaterialBehavior in rawMaterialBehaviors)
+        foreach (GameObject obj in objectTracker.GetObjects())
         {
-            Destroy(rawMaterialBehavior.gameObject);
+            Destroy(obj);
         }
 
         spawnCount = 0;
