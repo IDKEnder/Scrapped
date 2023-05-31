@@ -3,11 +3,11 @@ using UnityEngine;
 public class DestroyOnCollision : MonoBehaviour
 {
     public int DestroyedMaterial = 0; // Variable to store the destroyed material value
-    private ObjectTracker objectTracker; // Reference to the ObjectTracker script
+    private MovingObjectTracker ObjectTracker; // Reference to the ObjectTracker script
 
     private void Start()
     {
-        objectTracker = FindObjectOfType<ObjectTracker>(); // Find the ObjectTracker component in the scene
+        ObjectTracker = FindObjectOfType<MovingObjectTracker>(); // Find the ObjectTracker component in the scene
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -19,9 +19,9 @@ public class DestroyOnCollision : MonoBehaviour
             DestroyedMaterial--;
             Debug.Log("Moving object destroyed. Destroyed Material: " + DestroyedMaterial); //Checker
 
-            if (objectTracker != null)
+            if (ObjectTracker != null)
             {
-                objectTracker.RemoveObject(movingObject.gameObject); // Remove the destroyed object from the ObjectTracker
+                ObjectTracker.RemoveObject(movingObject.gameObject); // Remove the destroyed object from the ObjectTracker
             }
         }
     }

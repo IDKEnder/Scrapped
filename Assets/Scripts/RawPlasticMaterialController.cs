@@ -5,11 +5,11 @@ using UnityEngine;
 public class RawPlasticMaterialController : MonoBehaviour
 {
     private bool isInteractable = true; // Flag to track if the object is interactable
-    private ObjectTracker objectTracker; // Reference to the ObjectTracker script
+    private MovingObjectTracker objectTracker; // Reference to the ObjectTracker script
 
     private void Start()
     {
-        objectTracker = FindObjectOfType<ObjectTracker>(); // Find the ObjectTracker component in the scene
+        objectTracker = FindObjectOfType<MovingObjectTracker>(); // Find the ObjectTracker component in the scene
     }
 
     private void OnTriggerStay2D(Collider2D collision)

@@ -16,7 +16,7 @@ public class RawMaterialSpawner : MonoBehaviour
     public int spawnCount = 0;
     private float timer = 0f;
     private float delayTimer = 0f;
-    public ObjectTracker objectTracker;
+    public MovingObjectTracker objectTracker;
 
     private void OnEnable()
     {

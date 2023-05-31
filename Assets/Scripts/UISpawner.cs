@@ -11,8 +11,8 @@ public class UISpawner : MonoBehaviour
     public MaterialType selectedMaterial;
     public GameObject item; // The item game object to spawn
     private GameObject spawnedItem; // Reference to the spawned item
-
     public Player player; // Reference to the Player script
+    public ObjectTracker objectTracker; // Reference to the ObjectTracker script
 
     private void Update()
     {
@@ -49,10 +49,16 @@ public class UISpawner : MonoBehaviour
     {
         // Instantiate a new game object as the item
         spawnedItem = Instantiate(item, transform.position, transform.rotation);
+
+        // Add the spawned item to the ObjectTracker
+        objectTracker.AddSpawnedObject(spawnedItem);
     }
 
     private void DestroyItem()
     {
+        // Remove the spawned item from the ObjectTracker
+        objectTracker.RemoveSpawnedObject(spawnedItem);
+
         // Destroy the spawned item
         Destroy(spawnedItem);
         spawnedItem = null;
