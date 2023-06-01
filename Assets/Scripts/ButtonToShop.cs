@@ -18,12 +18,12 @@ public class ButtonToShop : MonoBehaviour
     public void HandleClick()
     {
         SetActiveCanvas();
-        
+
     }
 
     private void SetActiveCanvas()
     {
-        
+
         if (canvas1 != null)
         {
             canvas1.gameObject.SetActive(false);
