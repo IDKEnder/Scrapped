@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 95ab9894bc9184c409a26314fbe67917
+guid: a3f29fcac0b412945bfd1126394b5ffd
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,7 +105,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Options UI_0
+      name: OtherUI2_0
       rect:
         serializedVersion: 2
         x: 81
@@ -119,14 +119,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 36090366ab221224db9e1477187eb641
-      internalID: 233557077
+      spriteID: 9e8079aa1a924ed4d8ee030163e8aa87
+      internalID: -182142109
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Options UI_1
+      name: OtherUI2_1
       rect:
         serializedVersion: 2
         x: 106
@@ -140,14 +140,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 32fefe5200e938045a7611f5f1b8cc5e
-      internalID: -358107207
+      spriteID: 1719068c4f9ddc2409da792cb122d0d2
+      internalID: -1573701510
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Options UI_2
+      name: OtherUI2_2
       rect:
         serializedVersion: 2
         x: 131
@@ -161,14 +161,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a93b0a99119b55c44918e0c5691adca1
-      internalID: 979359297
+      spriteID: ce25d481c1d445f438c3d00744d9ca78
+      internalID: -1824038845
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Options UI_3
+      name: OtherUI2_3
       rect:
         serializedVersion: 2
         x: 156
@@ -182,14 +182,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 17f42be7a0fd2cd4a9596f6bf23807d5
-      internalID: 28381234
+      spriteID: 2207bac1ffb73a74291ce282b9d5eda3
+      internalID: -719074452
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Options UI_4
+      name: OtherUI2_4
       rect:
         serializedVersion: 2
         x: 181
@@ -203,14 +203,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a23b06e01b84e404fb1b61564bc332df
-      internalID: -2124663524
+      spriteID: 1517f73a2aa84c047884f3eb9e591728
+      internalID: 1635319885
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Options UI_5
+      name: OtherUI2_5
       rect:
         serializedVersion: 2
         x: 206
@@ -224,14 +224,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b4c2229130bdf7644893c4691e0a8277
-      internalID: -500473447
+      spriteID: 5c3572d45289f8840b26022e3ff7628c
+      internalID: 1220067943
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Options UI_6
+      name: OtherUI2_6
       rect:
         serializedVersion: 2
         x: 231
@@ -245,14 +245,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 57bad35fad763f249841fdbd6eb78717
-      internalID: -1072779640
+      spriteID: c459c163d2e6c374bad0e3578e684090
+      internalID: 844109046
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Options UI_7
+      name: OtherUI2_7
       rect:
         serializedVersion: 2
         x: 256
@@ -266,14 +266,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f93bb3f1b54f578499b41927640e30a0
-      internalID: -1232436677
+      spriteID: c4b21b58703cd3c4fa90d98a2d2b5934
+      internalID: 1990137762
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Options UI_8
+      name: OtherUI2_8
       rect:
         serializedVersion: 2
         x: 376
@@ -287,14 +287,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1ffc306a278475b49ab7b30ffea7dfc6
-      internalID: -1669254323
+      spriteID: e64009e17e05f124ebcdeaf23093e05f
+      internalID: -142472924
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Options UI_9
+      name: OtherUI2_9
       rect:
         serializedVersion: 2
         x: 86
@@ -308,14 +308,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 941f809e260b8894b8239657bc856da0
-      internalID: -1848679893
+      spriteID: b409ed9d53388d548acb7fe351302cf9
+      internalID: 1338900935
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Options UI_10
+      name: OtherUI2_10
       rect:
         serializedVersion: 2
         x: 101
@@ -329,14 +329,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f3e510fd3ad8f2479a3e96ffd040ee3
-      internalID: 1401334195
+      spriteID: fb915b2144026914f9b1a7af9fc40579
+      internalID: 1313267197
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Options UI_11
+      name: OtherUI2_11
       rect:
         serializedVersion: 2
         x: 131
@@ -350,14 +350,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 042e59eee83c08a4ea3442ca8dbdb290
-      internalID: 2036647712
+      spriteID: ebbd3d0e4db61284f8d0b572bb973593
+      internalID: -921336902
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Options UI_12
+      name: OtherUI2_12
       rect:
         serializedVersion: 2
         x: 156
@@ -371,14 +371,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 741b0bdbb1478e54882cb82fce1d05c2
-      internalID: 1952824836
+      spriteID: a433fc7a633aa2a4c8a1b41574ceca98
+      internalID: -108865137
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Options UI_13
+      name: OtherUI2_13
       rect:
         serializedVersion: 2
         x: 176
@@ -392,14 +392,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb332ef164b63464abaa806fc1c7c17c
-      internalID: 669552083
+      spriteID: 0c028789a8a8ace409ec732e69cdf796
+      internalID: -1547536708
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Options UI_14
+      name: OtherUI2_14
       rect:
         serializedVersion: 2
         x: 206
@@ -413,14 +413,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0dfd4e26aca0e5748a20e32965d4c701
-      internalID: 2073364644
+      spriteID: 018b5fdc1c72d2b42b27625f9b3f75c8
+      internalID: 1725304346
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Options UI_15
+      name: OtherUI2_15
       rect:
         serializedVersion: 2
         x: 231
@@ -434,14 +434,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 525f16dd083017d4080b0c31b1034cea
-      internalID: -856078830
+      spriteID: 3875d46a8ee930244a27f129ae834b29
+      internalID: 786807057
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Options UI_16
+      name: OtherUI2_16
       rect:
         serializedVersion: 2
         x: 256
@@ -455,14 +455,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 524c6ae311018df4db9460582f71d38b
-      internalID: 515588315
+      spriteID: 62127969967a8e4449d3331fc3a46cfa
+      internalID: -202590401
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Options UI_17
+      name: OtherUI2_17
       rect:
         serializedVersion: 2
         x: 81
@@ -476,14 +476,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2acad41ab7bb4a44a92a0563fd74ef66
-      internalID: -668170444
+      spriteID: a644e7ed6e2cede48a3af24c21328ec2
+      internalID: -1747638402
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Options UI_18
+      name: OtherUI2_18
       rect:
         serializedVersion: 2
         x: 106
@@ -497,14 +497,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 57f852958a86c124c8e30ecd9cdff9ce
-      internalID: 329543228
+      spriteID: 79e37a40a6db3a74a98d250aa15b9240
+      internalID: 911688433
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Options UI_19
+      name: OtherUI2_19
       rect:
         serializedVersion: 2
         x: 131
@@ -518,14 +518,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9b71060be170da845abc65cb1747317b
-      internalID: 1474374307
+      spriteID: 05b199728e387db489b13fb00d43547f
+      internalID: -721570864
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Options UI_20
+      name: OtherUI2_20
       rect:
         serializedVersion: 2
         x: 156
@@ -539,14 +539,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c8b0729d8e9d274e93386e4695ac08b
-      internalID: 2095986906
+      spriteID: 2ef169a5624379b4896f6288bb977a97
+      internalID: 580619295
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Options UI_21
+      name: OtherUI2_21
       rect:
         serializedVersion: 2
         x: 176
@@ -560,14 +560,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 289f07ed5f2e6c842965afd6233cc5ae
-      internalID: 713317199
+      spriteID: a48aabfa8dca3264abc844911b35de34
+      internalID: 1964489337
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Options UI_22
+      name: OtherUI2_22
       rect:
         serializedVersion: 2
         x: 201
@@ -581,14 +581,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1ca9cb69f2f6ebb409aa4d5ab8960366
-      internalID: 1305066217
+      spriteID: a95d4649acb38e043bfacde155d67d5f
+      internalID: -1016055590
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Options UI_23
+      name: OtherUI2_23
       rect:
         serializedVersion: 2
         x: 221
@@ -602,14 +602,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b5bf2e1432755f4f8fae8374ef5bf1c
-      internalID: 1116038802
+      spriteID: f00c9fd5251ed5e499cc16eb29185df6
+      internalID: -509955482
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Options UI_24
+      name: OtherUI2_24
       rect:
         serializedVersion: 2
         x: 251
@@ -623,14 +623,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e43c30168f30e24b84a6ff892baf759
-      internalID: -1968392039
+      spriteID: 82f093e02f2b1d24e99d172a73e867e6
+      internalID: 1145480459
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Options UI_25
+      name: OtherUI2_25
       rect:
         serializedVersion: 2
         x: 81
@@ -644,14 +644,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a8129bc069254044fbf81665de92c38d
-      internalID: 2014227858
+      spriteID: d078cc945ae53434fa0d48635a4bb0c7
+      internalID: 120837938
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Options UI_26
+      name: OtherUI2_26
       rect:
         serializedVersion: 2
         x: 101
@@ -665,14 +665,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: acb054bd7d89c2240902b0f39b53d587
-      internalID: -1044543820
+      spriteID: b8dacf7ca5c099f4bb9398d7e5a37223
+      internalID: 1122150332
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Options UI_27
+      name: OtherUI2_27
       rect:
         serializedVersion: 2
         x: 131
@@ -686,14 +686,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26bdbe68a6e9db1468d8f4a728fb759b
-      internalID: -333999524
+      spriteID: 2603145dd81c5684a808ef1cd1f6f658
+      internalID: 987357328
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Options UI_28
+      name: OtherUI2_28
       rect:
         serializedVersion: 2
         x: 146
@@ -707,14 +707,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a7cd909fd6bbfd41b6741189f126983
-      internalID: -1728268949
+      spriteID: df2b74fdeb6598749b5ef85d4fafc5b2
+      internalID: -1187969426
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Options UI_29
+      name: OtherUI2_29
       rect:
         serializedVersion: 2
         x: 131
@@ -728,14 +728,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a85bb3c531a45b44ca09123810767467
-      internalID: 764677052
+      spriteID: d46b8fda6eed85b409493d5c3182a00f
+      internalID: 1454231716
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Options UI_30
+      name: OtherUI2_30
       rect:
         serializedVersion: 2
         x: 146
@@ -749,14 +749,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 61832bc1b01a7a341b557c11435f9c20
-      internalID: 512648852
+      spriteID: 7ce09f058e86020468601e7f5d626438
+      internalID: 878321864
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Options UI_31
+      name: OtherUI2_31
       rect:
         serializedVersion: 2
         x: 376
@@ -770,14 +770,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f5ccfc2fba34673488f7a4f9c8295691
-      internalID: -367825572
+      spriteID: 0e46e7cd7a37ee24f835c3b5adff4b87
+      internalID: 533203422
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Options UI_32
+      name: OtherUI2_32
       rect:
         serializedVersion: 2
         x: 378
@@ -791,8 +791,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e94b28d48c4fb1469db98b0ff7b2544
-      internalID: -744731173
+      spriteID: 087b6e07cbf5a594ea411394693f293b
+      internalID: 457794988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OtherUI2_33
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 562
+        width: 334
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f56059e934c87b49915f4c86c28244f
+      internalID: -64535497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OtherUI2_34
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 515
+        width: 157
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a86827f2b19997479bdaf234d79510d
+      internalID: 1107748212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OtherUI2_35
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 451
+        width: 216
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a9827f8e3225e948ae006dfb24eca8b
+      internalID: -1613047883
       vertices: []
       indices: 
       edges: []
@@ -808,39 +871,68 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Options UI_0: 233557077
-      Options UI_1: -358107207
-      Options UI_10: 1401334195
-      Options UI_11: 2036647712
-      Options UI_12: 1952824836
-      Options UI_13: 669552083
-      Options UI_14: 2073364644
-      Options UI_15: -856078830
-      Options UI_16: 515588315
-      Options UI_17: -668170444
-      Options UI_18: 329543228
-      Options UI_19: 1474374307
-      Options UI_2: 979359297
-      Options UI_20: 2095986906
-      Options UI_21: 713317199
-      Options UI_22: 1305066217
-      Options UI_23: 1116038802
-      Options UI_24: -1968392039
-      Options UI_25: 2014227858
-      Options UI_26: -1044543820
-      Options UI_27: -333999524
-      Options UI_28: -1728268949
-      Options UI_29: 764677052
-      Options UI_3: 28381234
-      Options UI_30: 512648852
-      Options UI_31: -367825572
-      Options UI_32: -744731173
-      Options UI_4: -2124663524
-      Options UI_5: -500473447
-      Options UI_6: -1072779640
-      Options UI_7: -1232436677
-      Options UI_8: -1669254323
-      Options UI_9: -1848679893
+      OtherUI2_0: -182142109
+      OtherUI2_1: -1573701510
+      OtherUI2_10: 1313267197
+      OtherUI2_11: -921336902
+      OtherUI2_12: -108865137
+      OtherUI2_13: -1547536708
+      OtherUI2_14: 1725304346
+      OtherUI2_15: 786807057
+      OtherUI2_16: -202590401
+      OtherUI2_17: -1747638402
+      OtherUI2_18: 911688433
+      OtherUI2_19: -721570864
+      OtherUI2_2: -1824038845
+      OtherUI2_20: 580619295
+      OtherUI2_21: 1964489337
+      OtherUI2_22: -1016055590
+      OtherUI2_23: -509955482
+      OtherUI2_24: 1145480459
+      OtherUI2_25: 120837938
+      OtherUI2_26: 1122150332
+      OtherUI2_27: 987357328
+      OtherUI2_28: -1187969426
+      OtherUI2_29: 1454231716
+      OtherUI2_3: -719074452
+      OtherUI2_30: 878321864
+      OtherUI2_31: 533203422
+      OtherUI2_32: 457794988
+      OtherUI2_33: -64535497
+      OtherUI2_34: 1107748212
+      OtherUI2_35: -1613047883
+      OtherUI2_36: 1338251364
+      OtherUI2_37: -1658368304
+      OtherUI2_38: 1549053214
+      OtherUI2_39: -1789603448
+      OtherUI2_4: 1635319885
+      OtherUI2_40: 2096430090
+      OtherUI2_41: 2075256945
+      OtherUI2_42: 1245302736
+      OtherUI2_43: 23930245
+      OtherUI2_44: 197478897
+      OtherUI2_45: -1514833690
+      OtherUI2_46: 1635627248
+      OtherUI2_47: 1242380593
+      OtherUI2_48: 421076578
+      OtherUI2_49: -639425367
+      OtherUI2_5: 1220067943
+      OtherUI2_50: 726479551
+      OtherUI2_51: 1887688854
+      OtherUI2_52: 1130913280
+      OtherUI2_53: 169625010
+      OtherUI2_54: -959442697
+      OtherUI2_55: 1982480786
+      OtherUI2_56: -483391402
+      OtherUI2_57: 31012688
+      OtherUI2_58: 780869291
+      OtherUI2_59: -470002627
+      OtherUI2_6: 844109046
+      OtherUI2_60: -451295336
+      OtherUI2_61: -1375650160
+      OtherUI2_7: 1990137762
+      OtherUI2_8: -142472924
+      OtherUI2_9: 1338900935
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

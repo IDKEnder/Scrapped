@@ -1,5 +1,8 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class NextDay : MonoBehaviour
 {
@@ -12,6 +15,11 @@ public class NextDay : MonoBehaviour
     public RawMaterialSpawner rawMaterialSpawner;
     public DayCounter dayCounter;
     public CashDisplay cashDisplay;
+
+    [SerializeField]
+    private int deductionAmount = 10; // Adjust the deduction amount here
+    [SerializeField]
+    private int gameOverScene; // Scene to switch
 
     private void Start()
     {
@@ -87,7 +95,15 @@ public class NextDay : MonoBehaviour
     {
         if (displayShipment != null && cashDisplay != null)
         {
-            cashDisplay.cash = (int)displayShipment.total; // Update the cash variable with the value of total from DisplayShipment
+            int adjustedDeductionAmount = deductionAmount; // Assign the serialized deductionAmount to a local variable
+                                                           // Perform additional logic with adjustedDeductionAmount if needed
+            int deductedTotal = (int)displayShipment.total - adjustedDeductionAmount; // Deduct the adjustedDeductionAmount from total
+            cashDisplay.cash = deductedTotal; // Update cashDisplay.cash with the deducted total
+
+            if (deductedTotal < 0)
+            {
+               SceneManager.LoadScene(gameOverScene);
+            }
         }
     }
 }
