@@ -5,7 +5,7 @@ public class CanvasController : MonoBehaviour
     public GameObject canvas1;
     public GameObject options;
     public GameObject Endday;
-
+    
     void Update()
     {
         // Check if the Escape key is pressed
@@ -31,5 +31,6 @@ public class CanvasController : MonoBehaviour
         canvas1.SetActive(false);
         options.SetActive(false);
         Endday.SetActive(true);
+        
     }
 }
