@@ -1584,7 +1584,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -452.0001, y: 134}
+  m_AnchoredPosition: {x: -452.00006, y: 134}
   m_SizeDelta: {x: -1207.8, y: -382.63}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &291210202
@@ -4033,7 +4033,6 @@ MonoBehaviour:
   canvas1: {fileID: 268169921}
   options: {fileID: 1067665246}
   Endday: {fileID: 603776956}
-  Shop: {fileID: 0}
 --- !u!4 &861786025
 Transform:
   m_ObjectHideFlags: 0
@@ -6348,7 +6347,6 @@ MonoBehaviour:
   canvas1: {fileID: 268169921}
   options: {fileID: 1067665246}
   Endday: {fileID: 603776956}
-  Shop: {fileID: 0}
 --- !u!1 &1369084563
 GameObject:
   m_ObjectHideFlags: 0
@@ -9296,7 +9294,6 @@ MonoBehaviour:
   canvas1: {fileID: 268169921}
   options: {fileID: 1067665246}
   Endday: {fileID: 1917784930}
-  Shop: {fileID: 0}
 --- !u!1 &1947118352
 GameObject:
   m_ObjectHideFlags: 0
