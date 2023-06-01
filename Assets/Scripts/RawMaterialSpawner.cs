@@ -17,6 +17,7 @@ public class RawMaterialSpawner : MonoBehaviour
     private float timer = 0f;
     private float delayTimer = 0f;
     public MovingObjectTracker objectTracker;
+    public AudioSource conveyorbelt;
 
     private void OnEnable()
     {
@@ -68,9 +69,10 @@ public class RawMaterialSpawner : MonoBehaviour
 
                     // Add the spawned object to the object tracker
                     objectTracker.AddObject(spawnedObject);
+               
 
                     spawnCount++;
-
+                    conveyorbelt.Play();
                     break;
                 }
             }
