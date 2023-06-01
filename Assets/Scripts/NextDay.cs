@@ -10,6 +10,7 @@ public class NextDay : MonoBehaviour
     public Canvas canvas1;
     public Canvas optionsCanvas;
     public Canvas enddayCanvas;
+    public Canvas Shop;
     public DisplayShipment displayShipment;
     public Shipment shipment;
     public RawMaterialSpawner rawMaterialSpawner;
@@ -59,6 +60,11 @@ public class NextDay : MonoBehaviour
         if (canvas1 != null)
         {
             canvas1.gameObject.SetActive(true);
+        }
+
+        if(Shop != null)
+        {
+            Shop.gameObject.SetActive(true);
         }
     }
 
