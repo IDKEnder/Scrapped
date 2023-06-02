@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 public class ObjectTracker : MonoBehaviour
 {
-    private List<GameObject> spawnedObjects = new List<GameObject>();
+    public List<GameObject> spawnedObjects = new List<GameObject>();
 
-    private bool isObjectsActive = true;
+    public bool isObjectsActive = true;
 
     public void AddSpawnedObject(GameObject obj)
     {

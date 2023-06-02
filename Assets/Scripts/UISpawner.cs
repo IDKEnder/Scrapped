@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class UISpawner : MonoBehaviour
 {
@@ -10,9 +11,20 @@ public class UISpawner : MonoBehaviour
 
     public MaterialType selectedMaterial;
     public GameObject item; // The item game object to spawn
-    private GameObject spawnedItem; // Reference to the spawned item
+    private List<GameObject> spawnedItems = new List<GameObject>(); // List to store spawned items for this instance
     public Player player; // Reference to the Player script
     public ObjectTracker objectTracker; // Reference to the ObjectTracker script
+    public GameClock gameClock; // Reference to the GameClock script
+
+    private void OnEnable()
+    {
+        GameClock.OnTimeReached += DestroySpawnedItems;
+    }
+
+    private void OnDisable()
+    {
+        GameClock.OnTimeReached -= DestroySpawnedItems;
+    }
 
     private void Update()
     {
@@ -20,14 +32,14 @@ public class UISpawner : MonoBehaviour
         {
             if (HasMaterialType(selectedMaterial))
             {
-                if (spawnedItem == null)
+                if (spawnedItems.Count == 0)
                 {
                     SpawnItem();
                 }
             }
-            else if (spawnedItem != null)
+            else if (spawnedItems.Count > 0)
             {
-                DestroyItem();
+                DestroyItems();
             }
         }
     }
@@ -48,19 +60,32 @@ public class UISpawner : MonoBehaviour
     private void SpawnItem()
     {
         // Instantiate a new game object as the item
-        spawnedItem = Instantiate(item, transform.position, transform.rotation);
+        GameObject newSpawnedItem = Instantiate(item, transform.position, transform.rotation);
 
         // Add the spawned item to the ObjectTracker
-        objectTracker.AddSpawnedObject(spawnedItem);
+        objectTracker.AddSpawnedObject(newSpawnedItem);
+
+        // Add the spawned item to the list
+        spawnedItems.Add(newSpawnedItem);
     }
 
-    private void DestroyItem()
+    private void DestroyItems()
     {
-        // Remove the spawned item from the ObjectTracker
-        objectTracker.RemoveSpawnedObject(spawnedItem);
+        foreach (GameObject spawnedItem in spawnedItems)
+        {
+            // Remove the spawned item from the ObjectTracker
+            objectTracker.RemoveSpawnedObject(spawnedItem);
 
-        // Destroy the spawned item
-        Destroy(spawnedItem);
-        spawnedItem = null;
+            // Destroy the spawned item
+            Destroy(spawnedItem);
+        }
+
+        // Clear the list
+        spawnedItems.Clear();
+    }
+
+    private void DestroySpawnedItems()
+    {
+        DestroyItems();
     }
 }

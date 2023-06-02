@@ -5042,6 +5042,7 @@ MonoBehaviour:
   item: {fileID: 1698412065}
   player: {fileID: 2100102085}
   objectTracker: {fileID: 1543054784}
+  gameClock: {fileID: 1041036950}
 --- !u!1 &939435338
 GameObject:
   m_ObjectHideFlags: 0
@@ -8764,6 +8765,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 138394b0a0385554ab21ab76a3d248cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnedObjects: []
+  isObjectsActive: 1
 --- !u!4 &1543054785
 Transform:
   m_ObjectHideFlags: 0
@@ -9290,6 +9293,7 @@ MonoBehaviour:
   item: {fileID: 1773435988}
   player: {fileID: 2100102085}
   objectTracker: {fileID: 1543054784}
+  gameClock: {fileID: 1041036950}
 --- !u!1 &1628445318
 GameObject:
   m_ObjectHideFlags: 0
@@ -11387,11 +11391,11 @@ MonoBehaviour:
   - {fileID: 1472264986}
   delay: 2
   spawnRates:
-  - 50
-  - 2
-  - 1
-  - 0.6
-  - 0
+  - 70
+  - 20
+  - 15
+  - 10
+  - 35
   numObjectsToPool: 5
 --- !u!1 &2100102078
 GameObject:
@@ -11726,11 +11730,11 @@ MonoBehaviour:
   - {fileID: 720710287}
   delay: 2
   spawnRates:
-  - 50
-  - 2
-  - 1
-  - 0.6
-  - 0
+  - 70
+  - 20
+  - 15
+  - 10
+  - 35
   numObjectsToPool: 5
 --- !u!4 &2119863979
 Transform:

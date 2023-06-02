@@ -7,6 +7,17 @@ public class Items : MonoBehaviour
     [SerializeField]
     private ItemType itemType;
 
+    private Spawner spawner;
+
+    private void Start()
+    {
+        spawner = FindObjectOfType<Spawner>();
+        if (spawner == null)
+        {
+            Debug.LogError("Spawner component not found.");
+        }
+    }
+
     private void OnTriggerStay2D(Collider2D collision)
     {
         Player player = collision.GetComponent<Player>();
@@ -47,6 +58,11 @@ public class Items : MonoBehaviour
                 default:
                     Debug.LogError("Invalid item type");
                     break;
+            }
+
+            if (spawner != null)
+            {
+                spawner.UpdateSpawnedObjectsList(gameObject);
             }
 
             Destroy(gameObject);

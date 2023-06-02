@@ -9,7 +9,6 @@ public class Spawner : MonoBehaviour
     public float delay = 2f;
     public float[] spawnRates;
     public int numObjectsToPool = 5;
-
     private List<GameObject> spawnedObjects = new List<GameObject>();
     private GameObject currentSpawnedObject; // Reference to the currently spawned object
 
@@ -104,5 +103,10 @@ public class Spawner : MonoBehaviour
         {
             spawnedObject.SetActive(active);
         }
+    }
+
+    public void UpdateSpawnedObjectsList(GameObject objectToRemove)
+    {
+        spawnedObjects.Remove(objectToRemove);
     }
 }
