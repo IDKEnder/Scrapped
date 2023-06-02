@@ -5,7 +5,7 @@ public class GameClock : MonoBehaviour
 {
     public static event System.Action OnTimeThresholdReached; // Static event
     public static event System.Action OnTimeReached;
-
+    public GameObject objectToDeactivate;
     public CanvasController canvasController;
     public float currentTime = 0.0f;
     public float timeSpeed = 1.0f;
@@ -49,6 +49,12 @@ public class GameClock : MonoBehaviour
         {
             OnTimeReached?.Invoke();
             OnTimeThresholdReached.Invoke(); // Invoke the event
+
+            if (objectToDeactivate != null)
+            {
+                objectToDeactivate.SetActive(false); // Deactivate the specified object
+            }
+
             CanvasController canvasController = FindObjectOfType<CanvasController>();
             canvasController.ActivateEnddayCanvas();
         }

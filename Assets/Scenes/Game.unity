@@ -873,7 +873,7 @@ GameObject:
   - component: {fileID: 94900224}
   - component: {fileID: 94900223}
   m_Layer: 5
-  m_Name: Text Box
+  m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2012,7 +2012,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &268169922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2095,7 +2095,6 @@ RectTransform:
   - {fileID: 1041036949}
   - {fileID: 1253682949}
   - {fileID: 92812143}
-  - {fileID: 1107307250}
   - {fileID: 520054321}
   - {fileID: 1510337249}
   - {fileID: 470374692}
@@ -2147,7 +2146,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -452.00012, y: 134}
+  m_AnchoredPosition: {x: -452.00006, y: 134}
   m_SizeDelta: {x: -1207.8, y: -382.63}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &291210202
@@ -2663,7 +2662,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 268169925}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &470374693
 CircleCollider2D:
@@ -3013,7 +3012,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 268169925}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &520054322
 MonoBehaviour:
@@ -3591,7 +3590,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &603776957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3860,7 +3859,7 @@ GameObject:
   - component: {fileID: 719364705}
   - component: {fileID: 719364704}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Next
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3944,19 +3943,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 719364706}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ButtonToShop, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &719364706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4511,10 +4498,10 @@ RectTransform:
   m_Father: {fileID: 291210201}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 70, y: -70}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &810258745
 MonoBehaviour:
@@ -5689,6 +5676,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16f009f7f77328f4089e614515e2d109, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectToDeactivate: {fileID: 1107307249}
   canvasController: {fileID: 1320714186}
   currentTime: 0
   timeSpeed: 1
@@ -5900,12 +5888,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1107307249}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 210.8, y: 253, z: 0}
+  m_LocalPosition: {x: 3.5, y: 3.66, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 268169925}
-  m_RootOrder: 9
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1107307251
 MonoBehaviour:
@@ -6395,10 +6383,10 @@ RectTransform:
   m_Father: {fileID: 291210201}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 70, y: -180}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1204337817
 MonoBehaviour:
@@ -7621,7 +7609,7 @@ RectTransform:
   m_GameObject: {fileID: 1369084563}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.125, y: 1.175, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1157427525}
@@ -8374,7 +8362,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 268169925}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &1510337250
 CircleCollider2D:
@@ -8565,7 +8553,7 @@ GameObject:
   - component: {fileID: 1520785781}
   - component: {fileID: 1520785780}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: DisplayShipment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8982,14 +8970,14 @@ MonoBehaviour:
   canvas1: {fileID: 268169924}
   optionsCanvas: {fileID: 1067665249}
   enddayCanvas: {fileID: 1157427524}
-  Shop: {fileID: 0}
-  displayShipment: {fileID: 0}
+  Shop: {fileID: 1157427524}
+  displayShipment: {fileID: 1520785780}
   shipment: {fileID: 1091270026}
   rawMaterialSpawner: {fileID: 1311228002}
   dayCounter: {fileID: 520054322}
   cashDisplay: {fileID: 1107307251}
-  deductionAmount: 10
-  gameOverScene: 0
+  deductionAmount: 100
+  gameOverScene: 7
 --- !u!114 &1589800248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9033,19 +9021,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1589800249}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1589800247}
-        m_TargetAssemblyTypeName: NextDay, Assembly-CSharp
-        m_MethodName: ResetDay
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1589800249
 MonoBehaviour:
   m_ObjectHideFlags: 0
