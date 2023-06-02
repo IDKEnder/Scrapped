@@ -9,6 +9,7 @@ public class DisplayShipment : MonoBehaviour
     public Text displayText;
     public CashDisplay cashDisplay;
     public Button Nextbutton;
+    public bool Doubled = false;
     private float bottlePrice = 100f;
     private float doubleBottlePrice = 200f;
     private float tripleBottlePrice = 300f;
@@ -79,8 +80,17 @@ public class DisplayShipment : MonoBehaviour
 
             displayString += " -1000(Daily Dept)" +"\n";
 
+        if (Doubled)
+        {
+            total = ((bottleTotal + doubleBottleTotal + tripleBottleTotal + goldenBottleTotal + brokenBottleTotal + CanTotal + doubleCanTotal + tripleCanTotal + goldenCanTotal + brokenCanTotal - DestroyedMaterialTotal) * 2) - 1000;
+            displayString += "Total: $ " + total.ToString("F2");
+        }
+        else
+        {
             total = (bottleTotal + doubleBottleTotal + tripleBottleTotal + goldenBottleTotal + brokenBottleTotal + CanTotal + doubleCanTotal + tripleCanTotal + goldenCanTotal + brokenCanTotal - DestroyedMaterialTotal) - 1000;
             displayString += "Total: $ " + total.ToString("F2");
+        }
+
             displayText.text = displayString;
 
         // Resize and center the text element

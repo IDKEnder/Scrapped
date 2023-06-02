@@ -697,7 +697,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8e7fdaf20c720546bba136e475d197a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CD: {fileID: 0}
+  CD: {fileID: 1107307251}
+  displayShipment: {fileID: 1520785780}
 --- !u!1 &69497286
 GameObject:
   m_ObjectHideFlags: 0
@@ -2160,7 +2161,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -452.00006, y: 134}
+  m_AnchoredPosition: {x: -452.0001, y: 134}
   m_SizeDelta: {x: -1207.8, y: -382.63}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &291210202
@@ -8709,6 +8710,7 @@ MonoBehaviour:
   displayText: {fileID: 1520785781}
   cashDisplay: {fileID: 1107307251}
   Nextbutton: {fileID: 719364705}
+  Doubled: 0
   total: 0
 --- !u!114 &1520785781
 MonoBehaviour:

@@ -4,6 +4,7 @@ using UnityEngine;
 public class Button2xMoney : MonoBehaviour
 {
     public CashDisplay CD;
+    public DisplayShipment displayShipment;
 
     // Start is called before the first frame update
     void Start()
@@ -14,6 +15,6 @@ public class Button2xMoney : MonoBehaviour
 
     void HandleClick()
     {
-        
+        displayShipment.Doubled = true;
     }
 }
