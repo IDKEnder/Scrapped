@@ -6,6 +6,8 @@ public class DisplayShipment : MonoBehaviour
     public DestroyOnCollision destroyOnCollision;
     public Shipment shipment;
     public Text displayText;
+    public Button2xMoney BM;
+
     private float bottlePrice = 100f;
     private float doubleBottlePrice = 200f;
     private float tripleBottlePrice = 300f;
@@ -68,8 +70,22 @@ public class DisplayShipment : MonoBehaviour
         displayString += "Destroyed Material: " + (destroyOnCollision.DestroyedMaterial * -1) + "  --  Deduction: $" + (DestroyedMaterialDeduction * -1).ToString("F2") +
             "  --  Total: $" + total.ToString("F2") + "\n";
 
+        //if (BM.multiplier)
+        //{
+        //    total = 2 * (bottleTotal + doubleBottleTotal + tripleBottleTotal + goldenBottleTotal + brokenBottleTotal + CanTotal + doubleCanTotal + tripleCanTotal + goldenCanTotal + brokenCanTotal - DestroyedMaterialTotal);
+
+        //    displayString += "Total: $" + total.ToString("F2");
+        //}
+        //else 
+        // {
+        //    total = bottleTotal + doubleBottleTotal + tripleBottleTotal + goldenBottleTotal + brokenBottleTotal + CanTotal + doubleCanTotal + tripleCanTotal + goldenCanTotal + brokenCanTotal - DestroyedMaterialTotal;
+        //    displayString += "Total: $" + total.ToString("F2");
+        //}
+
         total = bottleTotal + doubleBottleTotal + tripleBottleTotal + goldenBottleTotal + brokenBottleTotal + CanTotal + doubleCanTotal + tripleCanTotal + goldenCanTotal + brokenCanTotal - DestroyedMaterialTotal;
-        displayString += "Total: $" + total.ToString("F2");
+            displayString += "Total: $" + total.ToString("F2");
+
+
 
         displayText.text = displayString;
 
@@ -77,5 +93,11 @@ public class DisplayShipment : MonoBehaviour
         displayText.rectTransform.sizeDelta = new Vector2(1000f, 600f);
         displayText.rectTransform.anchoredPosition = new Vector2(0f, 0f);
         displayText.alignment = TextAnchor.MiddleCenter;
+
+
+
+
+
+
     }
 }
