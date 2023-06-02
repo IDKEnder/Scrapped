@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class ButtonBuyLoan : MonoBehaviour
 {
@@ -16,12 +18,17 @@ public class ButtonBuyLoan : MonoBehaviour
         button.onClick.AddListener(Update);
     }
 
+    public void MoveToScene(int sceneID)
+    {
+        SceneManager.LoadScene(sceneID);
+    }
+
     // Update is called once per frame
     void Update()
     {
         if (Cash.cash >= 1000000)
         {
-            SM.MoveToScene(8);         
+            MoveToScene(8);
         }
     }
 }

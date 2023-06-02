@@ -8,6 +8,8 @@ public class Button2xMoney : MonoBehaviour
     public CashDisplay CD;
     public DisplayShipment DS;
 
+    public bool multiplier = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,8 +28,8 @@ public class Button2xMoney : MonoBehaviour
 
         if (temp <= 550000)
         {
-            temp = CD.cash - 550000;
-            
+            multiplier = true;
+            temp = CD.cash - 550000;           
         }
     }
 }

@@ -70,20 +70,19 @@ public class DisplayShipment : MonoBehaviour
         displayString += "Destroyed Material: " + (destroyOnCollision.DestroyedMaterial * -1) + "  --  Deduction: $" + (DestroyedMaterialDeduction * -1).ToString("F2") +
             "  --  Total: $" + total.ToString("F2") + "\n";
 
-        //if (BM.multiplier)
-        //{
-        //    total = 2 * (bottleTotal + doubleBottleTotal + tripleBottleTotal + goldenBottleTotal + brokenBottleTotal + CanTotal + doubleCanTotal + tripleCanTotal + goldenCanTotal + brokenCanTotal - DestroyedMaterialTotal);
+        if (BM.multiplier)
+        {
+            total = 2 * (bottleTotal + doubleBottleTotal + tripleBottleTotal + goldenBottleTotal + brokenBottleTotal + CanTotal + doubleCanTotal + tripleCanTotal + goldenCanTotal + brokenCanTotal - DestroyedMaterialTotal);
 
-        //    displayString += "Total: $" + total.ToString("F2");
-        //}
-        //else 
-        // {
-        //    total = bottleTotal + doubleBottleTotal + tripleBottleTotal + goldenBottleTotal + brokenBottleTotal + CanTotal + doubleCanTotal + tripleCanTotal + goldenCanTotal + brokenCanTotal - DestroyedMaterialTotal;
-        //    displayString += "Total: $" + total.ToString("F2");
-        //}
-
-        total = bottleTotal + doubleBottleTotal + tripleBottleTotal + goldenBottleTotal + brokenBottleTotal + CanTotal + doubleCanTotal + tripleCanTotal + goldenCanTotal + brokenCanTotal - DestroyedMaterialTotal;
             displayString += "Total: $" + total.ToString("F2");
+        }
+        else 
+        {
+            total = bottleTotal + doubleBottleTotal + tripleBottleTotal + goldenBottleTotal + brokenBottleTotal + CanTotal + doubleCanTotal + tripleCanTotal + goldenCanTotal + brokenCanTotal - DestroyedMaterialTotal;
+            displayString += "Total: $" + total.ToString("F2");
+        }
+
+        
 
 
 

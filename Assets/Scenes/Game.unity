@@ -574,6 +574,7 @@ GameObject:
   - component: {fileID: 66568368}
   - component: {fileID: 66568367}
   - component: {fileID: 66568366}
+  - component: {fileID: 66568369}
   m_Layer: 5
   m_Name: Double money
   m_TagString: Untagged
@@ -645,7 +646,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 66568367}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 66568364}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &66568367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -684,6 +697,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 66568364}
   m_CullTransparentMesh: 1
+--- !u!114 &66568369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 66568364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8e7fdaf20c720546bba136e475d197a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CD: {fileID: 1107307251}
+  DS: {fileID: 1520785780}
+  multiplier: 0
 --- !u!1 &69497286
 GameObject:
   m_ObjectHideFlags: 0
@@ -2012,7 +2040,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &268169922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4498,10 +4526,10 @@ RectTransform:
   m_Father: {fileID: 291210201}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 70, y: -70}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &810258745
 MonoBehaviour:
@@ -5908,7 +5936,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e82daa739635a08429f673328c9f06f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cash: 100000
+  cash: 0
 --- !u!1 &1146009085
 GameObject:
   m_ObjectHideFlags: 0
@@ -6011,7 +6039,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1157427522
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6384,10 +6412,10 @@ RectTransform:
   m_Father: {fileID: 291210201}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 70, y: -180}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1204337817
 MonoBehaviour:
@@ -8693,6 +8721,7 @@ MonoBehaviour:
   destroyOnCollision: {fileID: 92812144}
   shipment: {fileID: 1091270026}
   displayText: {fileID: 1520785781}
+  BM: {fileID: 0}
   total: 0
 --- !u!114 &1520785781
 MonoBehaviour:
@@ -8978,9 +9007,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1585193951}
-        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
-        m_MethodName: 
+      - m_Target: {fileID: 1585193956}
+        m_TargetAssemblyTypeName: ButtonBuyLoan, Assembly-CSharp
+        m_MethodName: MoveToScene
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
