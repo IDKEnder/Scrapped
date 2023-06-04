@@ -6,6 +6,9 @@ public class Button2xMoney : MonoBehaviour
     public CashDisplay CD;
     public DisplayShipment displayShipment;
 
+    [SerializeField]
+    private Button button;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +18,11 @@ public class Button2xMoney : MonoBehaviour
 
     void HandleClick()
     {
-        displayShipment.Doubled = true;
+        if (CD.cash >= 5200)
+        {
+            CD.cash = CD.cash - 5200;
+            displayShipment.Doubled = true;
+            button.interactable = false;
+        }
     }
 }

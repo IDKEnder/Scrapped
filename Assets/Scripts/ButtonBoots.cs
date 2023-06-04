@@ -8,6 +8,9 @@ public class ButtonBoots : MonoBehaviour
     public PlayerMovement PM;
     public CashDisplay CD;
 
+    [SerializeField]
+    private Button button;
+
     private void Start()
     {
         // Attach the button click event to the HandleClick method
@@ -22,12 +25,11 @@ public class ButtonBoots : MonoBehaviour
 
     void rasly() 
     {
-        int temp = CD.cash;
-
-        if (temp <= 100000)
+        if (CD.cash >= 3000)
         {
-            temp = CD.cash - 100000;
+            CD.cash = CD.cash - 3000;
             PM.moveSpeed = 6f;
+            button.interactable = false;
         }
     }
 }
