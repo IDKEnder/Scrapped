@@ -1,14 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 
 public class Button2xMoney : MonoBehaviour
 {
     public CashDisplay CD;
-    public DisplayShipment DS;
-
-    public bool multiplier = false;
+    public DisplayShipment displayShipment;
 
     // Start is called before the first frame update
     void Start()
@@ -19,17 +15,6 @@ public class Button2xMoney : MonoBehaviour
 
     void HandleClick()
     {
-        rasly();
-    }
-
-    void rasly()
-    {
-        int temp = CD.cash;
-
-        if (temp <= 550000)
-        {
-            multiplier = true;
-            temp = CD.cash - 550000;           
-        }
+        displayShipment.Doubled = true;
     }
 }

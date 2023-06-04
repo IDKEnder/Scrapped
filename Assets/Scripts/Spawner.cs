@@ -99,10 +99,19 @@ public class Spawner : MonoBehaviour
     {
         isObjectsActive = active;
 
+        // Create a new list to store the valid spawned objects
+        List<GameObject> validSpawnedObjects = new List<GameObject>();
+
         foreach (GameObject spawnedObject in spawnedObjects)
         {
-            spawnedObject.SetActive(active);
+            if (spawnedObject != null) // Check if the GameObject is not null (not destroyed)
+            {
+                spawnedObject.SetActive(active);
+                validSpawnedObjects.Add(spawnedObject);
+            }
         }
+
+        spawnedObjects = validSpawnedObjects; // Update the spawnedObjects list with valid objects
     }
 
     public void UpdateSpawnedObjectsList(GameObject objectToRemove)

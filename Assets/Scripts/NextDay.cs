@@ -15,12 +15,6 @@ public class NextDay : MonoBehaviour
     public Shipment shipment;
     public RawMaterialSpawner rawMaterialSpawner;
     public DayCounter dayCounter;
-    public CashDisplay cashDisplay;
-
-    [SerializeField]
-    private int deductionAmount = 100; // Adjust the deduction amount here
-    [SerializeField]
-    private int gameOverScene; // Scene to switch
 
     private void Start()
     {
@@ -33,7 +27,6 @@ public class NextDay : MonoBehaviour
     {
         IncrementDays();
         SetActiveCanvas();
-        UpdateCash();
         ResetTotal();
         ResetSpawnCountAndLimit();
         ResetShipmentVariables();
@@ -94,21 +87,6 @@ public class NextDay : MonoBehaviour
             shipment.TripleBottle = 0;
             shipment.GoldenBottle = 0;
             shipment.BrokenBottle = 0;
-        }
-    }
-
-    private void UpdateCash()
-    {
-        if (displayShipment != null && cashDisplay != null)
-        {
-            int adjustedDeductionAmount = deductionAmount; // Assign the serialized deductionAmount to a local variable
-            int deductedTotal = (int)displayShipment.total - adjustedDeductionAmount; // Deduct the adjustedDeductionAmount from total
-            cashDisplay.cash = deductedTotal; // Update cashDisplay.cash with the deducted total
-
-            if (deductedTotal < 0)
-            {
-               SceneManager.LoadScene(gameOverScene);
-            }
         }
     }
 }

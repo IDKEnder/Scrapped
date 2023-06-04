@@ -1,13 +1,15 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class DisplayShipment : MonoBehaviour
 {
     public DestroyOnCollision destroyOnCollision;
     public Shipment shipment;
     public Text displayText;
-    public Button2xMoney BM;
-
+    public CashDisplay cashDisplay;
+    public Button Nextbutton;
+    public bool Doubled = false;
     private float bottlePrice = 100f;
     private float doubleBottlePrice = 200f;
     private float tripleBottlePrice = 300f;
@@ -20,6 +22,12 @@ public class DisplayShipment : MonoBehaviour
     private float brokenCanPrice = 50f;
     private float DestroyedMaterialDeduction = -1000f;
     public float total = 0f;
+
+    private void Start()
+    {
+        // Add a listener to the button's click event
+        Nextbutton.onClick.AddListener(HandleGameOverButtonClick);
+    }
 
     private void Update()
     {
@@ -70,33 +78,35 @@ public class DisplayShipment : MonoBehaviour
         displayString += "Destroyed Material: " + (destroyOnCollision.DestroyedMaterial * -1) + "  --  Deduction: $" + (DestroyedMaterialDeduction * -1).ToString("F2") +
             "  --  Total: $" + total.ToString("F2") + "\n";
 
-        if (BM.multiplier)
+            displayString += " -1000(Daily Dept)" +"\n";
+
+        if (Doubled)
         {
-            total = 2 * (bottleTotal + doubleBottleTotal + tripleBottleTotal + goldenBottleTotal + brokenBottleTotal + CanTotal + doubleCanTotal + tripleCanTotal + goldenCanTotal + brokenCanTotal - DestroyedMaterialTotal);
-
-            displayString += "Total: $" + total.ToString("F2");
+            total = ((bottleTotal + doubleBottleTotal + tripleBottleTotal + goldenBottleTotal + brokenBottleTotal + CanTotal + doubleCanTotal + tripleCanTotal + goldenCanTotal + brokenCanTotal - DestroyedMaterialTotal) * 2) - 1000;
+            displayString += "Total: $ " + total.ToString("F2");
         }
-        else 
+        else
         {
-            total = bottleTotal + doubleBottleTotal + tripleBottleTotal + goldenBottleTotal + brokenBottleTotal + CanTotal + doubleCanTotal + tripleCanTotal + goldenCanTotal + brokenCanTotal - DestroyedMaterialTotal;
-            displayString += "Total: $" + total.ToString("F2");
+            total = (bottleTotal + doubleBottleTotal + tripleBottleTotal + goldenBottleTotal + brokenBottleTotal + CanTotal + doubleCanTotal + tripleCanTotal + goldenCanTotal + brokenCanTotal - DestroyedMaterialTotal) - 1000;
+            displayString += "Total: $ " + total.ToString("F2");
         }
 
-        
-
-
-
-        displayText.text = displayString;
+            displayText.text = displayString;
 
         // Resize and center the text element
         displayText.rectTransform.sizeDelta = new Vector2(1000f, 600f);
         displayText.rectTransform.anchoredPosition = new Vector2(0f, 0f);
         displayText.alignment = TextAnchor.MiddleCenter;
 
-
-
-
-
-
+        cashDisplay.cash = (int)total;
     }
+
+    private void HandleGameOverButtonClick()
+    {
+        if (cashDisplay.cash <= -1)
+        {
+            SceneManager.LoadScene("GameOver"); // Load the "GameOver" scene
+        }
+    }
+
 }

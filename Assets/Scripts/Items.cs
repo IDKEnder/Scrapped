@@ -6,7 +6,6 @@ public class Items : MonoBehaviour
 {
     [SerializeField]
     private ItemType itemType;
-
     private Spawner spawner;
 
     private void Start()
@@ -23,6 +22,7 @@ public class Items : MonoBehaviour
         Player player = collision.GetComponent<Player>();
         if (player && Input.GetKey(KeyCode.E)) // Check if the "E" key is being held down
         {
+            Destroy(gameObject);
             switch (itemType)
             {
                 case ItemType.Bottle:
@@ -64,8 +64,6 @@ public class Items : MonoBehaviour
             {
                 spawner.UpdateSpawnedObjectsList(gameObject);
             }
-
-            Destroy(gameObject);
         }
     }
 }
