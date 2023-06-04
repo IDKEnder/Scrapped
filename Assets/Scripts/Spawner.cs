@@ -16,12 +16,12 @@ public class Spawner : MonoBehaviour
 
     private void OnEnable()
     {
-        GameClock.OnTimeReached += DestroySpawnedObjects;
+        GameClock.OnTimeThresholdReached += DestroyAllObjects;
     }
 
     private void OnDisable()
     {
-        GameClock.OnTimeReached -= DestroySpawnedObjects;
+        GameClock.OnTimeThresholdReached -= DestroyAllObjects;
     }
 
     private void Update()
@@ -117,5 +117,25 @@ public class Spawner : MonoBehaviour
     public void UpdateSpawnedObjectsList(GameObject objectToRemove)
     {
         spawnedObjects.Remove(objectToRemove);
+    }
+
+    private void DestroyAllObjects()
+    {
+        StopAllCoroutines(); // Stop any spawning coroutines
+
+        // Destroy the currently spawned object (interrupt animation)
+        if (currentSpawnedObject != null)
+        {
+            Destroy(currentSpawnedObject);
+        }
+
+        // Destroy all other spawned objects
+        foreach (GameObject spawnedObject in spawnedObjects)
+        {
+            Destroy(spawnedObject);
+        }
+
+        // Clear the list of spawned objects
+        spawnedObjects.Clear();
     }
 }
