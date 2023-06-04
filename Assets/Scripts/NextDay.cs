@@ -57,7 +57,7 @@ public class NextDay : MonoBehaviour
 
         if(Shop != null)
         {
-            Shop.gameObject.SetActive(true);
+            Shop.gameObject.SetActive(false);
         }
     }
 
